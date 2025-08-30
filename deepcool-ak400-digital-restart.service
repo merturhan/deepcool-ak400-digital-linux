@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart Deepcool AK400 Digital service after resume
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/bin/systemctl --no-block restart deepcool-ak400-digital.service
+
+[Install]
+WantedBy=suspend.target

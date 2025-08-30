@@ -1,0 +1,11 @@
+[Unit]
+Description=Deepcool AK400 Digital CPU cooler temperature and utilization display
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /usr/bin/deepcool-ak400-digital.py
+Restart=always
+
+[Install]
+WantedBy=default.target
